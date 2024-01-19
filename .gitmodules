@@ -1,4 +1,7 @@
 [submodule "test/components/arduino"]
 	path = test/components/arduino
 	url = https://github.com/espressif/arduino-esp32.git
+[submodule "test/components/PxMatrix"]
+	path = test/components/PxMatrix	
+	url = https://github.com/diplfranzhoepfinger/PxMatrix.git
 
