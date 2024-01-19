@@ -13,6 +13,6 @@
 [submodule "test/components/TetrisAnimation"]
 	path = test/components/TetrisAnimation
 	url = git@github.com:diplfranzhoepfinger/TetrisAnimation.git
-[submodule "test/components/TetrisAnimation"]
-	path = test/components/TetrisAnimation
+[submodule "test/components/ezTime"]
+	path = test/components/ezTime
 	url = git@github.com:abrender/ezTime.git
