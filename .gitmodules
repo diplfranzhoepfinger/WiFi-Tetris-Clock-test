@@ -10,3 +10,6 @@
 [submodule "test/components/Adafruit_BusIO"]
 	path = test/components/Adafruit_BusIO
 	url = https://github.com/adafruit/Adafruit_BusIO.git
+[submodule "test/components/TetrisAnimation"]
+	path = test/components/TetrisAnimation
+	url = git@github.com:diplfranzhoepfinger/TetrisAnimation.git
