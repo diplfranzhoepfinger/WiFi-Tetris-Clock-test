@@ -15,4 +15,4 @@
 	url = git@github.com:diplfranzhoepfinger/TetrisAnimation.git
 [submodule "test/components/ezTime"]
 	path = test/components/ezTime
-	url = git@github.com:abrender/ezTime.git
+	url = git@github.com:diplfranzhoepfinger/ezTime.git
