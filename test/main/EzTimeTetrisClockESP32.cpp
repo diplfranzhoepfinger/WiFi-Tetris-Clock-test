@@ -228,10 +228,13 @@ void setup() {
   display.flushDisplay();
 
   // Setup timer for driving display
-  timer = timerBegin(0, 80, true);
-  timerAttachInterrupt(timer, &display_updater, true);
-  timerAlarmWrite(timer, 2000, true);
-  timerAlarmEnable(timer);
+  // Set timer frequency to 1Mhz
+  timer = timerBegin(1000000);
+  // Attach display_updater function to our timer.
+  timerAttachInterrupt(timer, &display_updater);
+  // Set alarm to call onTimer function every 2ms (value in microseconds).
+  // Repeat the alarm (third parameter) with unlimited count = 0 (fourth parameter).
+  timerAlarm(timer, 2000, true, 0);
   yield();
 #ifdef double_buffer
   display.fillScreen(tetris.tetrisBLACK);
@@ -270,10 +273,13 @@ void setup() {
 
   // Start the Animation Timer
   tetris.setText("TINY PICO");
-  animationTimer = timerBegin(1, 80, true);
-  timerAttachInterrupt(animationTimer, &animationHandler, true);
-  timerAlarmWrite(animationTimer, 100000, true);
-  timerAlarmEnable(animationTimer);
+  // Set timer frequency to 1Mhz
+  animationTimer = timerBegin(1000000);
+  // Attach animationHandler function to our timer.
+  timerAttachInterrupt(animationTimer, &animationHandler);
+  // Set alarm to call onTimer function every 100ms (value in microseconds).
+  // Repeat the alarm (third parameter) with unlimited count = 0 (fourth parameter).
+  timerAlarm(animationTimer, 100000, true, 0);
 
   // Wait for the animation to finish
   while (!finishedAnimating)
