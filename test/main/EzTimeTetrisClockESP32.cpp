@@ -9,6 +9,15 @@
     Twitter: https://twitter.com/witnessmenow
  *******************************************************************/
 
+
+#include "esp_idf_version.h"
+// Not sure if both are needed but otherwise GPIO is not found
+#if ESP_IDF_VERSION >= ESP_IDF_VERSION_VAL(5, 0, 0)
+  #include "hal/gpio_ll.h"
+  #include "soc/gpio_struct.h"
+#endif
+
+
 // ----------------------------
 // Standard Libraries - Already Installed if you have ESP32 set up
 // ----------------------------
